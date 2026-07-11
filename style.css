@@ -1,18 +1,346 @@
-.hero{
-    background-image:
-        linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.35)),
-        url("images/aaravresort.jpg");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
 
-    min-height:700px;
+header {
+    background: linear-gradient(135deg, #8B0000 0%, #b30000 100%);
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
 
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
+.header-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
 
-    padding:100px 20px;
+.tagline {
+    font-size: 1.2em;
+    opacity: 0.95;
+    letter-spacing: 0.5px;
+}
+
+.hero {
+    padding: 150px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 700px;
+    background-size: cover !important;
+    background-position: center !important;
+}
+
+.hero-top-info {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    opacity: 0.95;
+}
+
+.hero-info-item {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-size: 1em;
+    color: white;
+    font-weight: 500;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.hero-info-item a {
+    color: #ffe4b5;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.hero-info-item a:hover {
+    color: white;
+}
+
+.map-link {
+    display: inline-flex;
+    align-items: center;
+}
+
+.map-link:hover {
+    text-decoration: underline;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h2 {
+    font-size: 2.8em;
+    color: white;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.hero-subtitle {
+    font-size: 1.3em;
+    color: white;
+    margin-bottom: 30px;
+    font-weight: 500;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.button {
+    display: inline-block;
+    padding: 15px 40px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+}
+
+.button-primary {
+    background: linear-gradient(135deg, #8B0000 0%, #b30000 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(139, 0, 0, 0.3);
+}
+
+.button-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(139, 0, 0, 0.4);
+}
+
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2.3em;
+    color: #8B0000;
+    margin-bottom: 40px;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #8B0000, #b30000);
+    border-radius: 2px;
+}
+
+.about {
+    background: white;
+}
+
+.about-text {
+    font-size: 1.1em;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+.services {
+    background: #f8f9fa;
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background: white;
+    padding: 35px 25px;
+    border-radius: 15px;
+    width: 250px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(139, 0, 0, 0.15);
+}
+
+.card-icon {
+    font-size: 3em;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 1.4em;
+    color: #8B0000;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.card p {
+    color: #666;
+    font-size: 0.95em;
+    line-height: 1.6;
+}
+
+.gallery {
+    background: white;
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.contact {
+    background: linear-gradient(135deg, #8B0000 0%, #b30000 100%);
+    color: white;
+}
+
+.contact h2 {
+    color: white;
+}
+
+.contact h2::after {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.contact-content {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-info {
+    text-align: center;
+}
+
+.contact-info h3 {
+    font-size: 1.3em;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.contact-info p {
+    font-size: 1.1em;
+    opacity: 0.95;
+}
+
+.contact-info a {
+    color: #ffe4b5;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+footer {
+    background: #1a1a1a;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 0.95em;
+    border-top: 3px solid #8B0000;
+}
+
+@media (max-width: 768px) {
+    .hero h2 {
+        font-size: 1.8em;
+    }
+    
+    .hero-subtitle {
+        font-size: 1em;
+    }
+    
+    .hero-top-info {
+        gap: 15px;
+    }
+    
+    .hero-info-item {
+        font-size: 0.9em;
+        padding: 10px 20px;
+    }
+    
+    section h2 {
+        font-size: 1.8em;
+    }
+    
+    .card {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .services-container {
+        gap: 15px;
+    }
+    
+    .contact-content {
+        gap: 30px;
+    }
 }
